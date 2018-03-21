@@ -16,6 +16,24 @@
 
 using namespace std;
 
+
+/*
+ * 
+ * 
+Algorithm (Used BFS Traversal):
+
+while(list of unvisited URLs Queue is not empty) {
+    take URL from the Queue
+    fetch content
+    Dump the data(Product name, URL, Price) into CSV file
+    parse out URLs from links
+    foreach URL {
+              If the extracted URL is not in either the visited or unvisited list
+              add unvisited URLs Queue and continue till queue is empty
+    }
+}
+*/
+
 std::vector<std::string> getURLS(std::string hrefCheck, std::string buffer)
 {
         size_t iterator = 0;
